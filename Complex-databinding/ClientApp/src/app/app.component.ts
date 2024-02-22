@@ -18,9 +18,6 @@ import { DataManager, Query, UrlAdaptor } from '@syncfusion/ej2-data';
 export class AppComponent {
   public data: DataManager = new DataManager({
     adaptor: new UrlAdaptor,
-    insertUrl: "Home/Insert",
-    removeUrl: "Home/Delete",
-    updateUrl: "Home/Update",
     url: "Home/Datasource",
   });
   public query?: Query = new Query().expand('Tasks');
