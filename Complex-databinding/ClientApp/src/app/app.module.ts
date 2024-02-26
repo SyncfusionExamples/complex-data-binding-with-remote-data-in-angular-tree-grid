@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { GridModule } from '@syncfusion/ej2-angular-grids';
-import { TreeGridModule } from '@syncfusion/ej2-angular-treegrid';
+import { TreeGridModule, PageService } from '@syncfusion/ej2-angular-treegrid';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { TreeGridModule } from '@syncfusion/ej2-angular-treegrid';
     BrowserModule,
     GridModule, TreeGridModule 
   ],
-  providers: [],
+  providers: [PageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
