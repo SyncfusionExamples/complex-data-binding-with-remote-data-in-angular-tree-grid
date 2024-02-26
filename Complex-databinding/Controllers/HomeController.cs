@@ -81,20 +81,20 @@ namespace SyncfusionAngularASPNETMVC.Controllers
                 if (tree.Count == 0)
                 {
                     int root = 0;
-                    for (var t = 1; t <= 5; t++)
+                    for (var t = 1; t <= 25; t++)
                     {
                         Random ran = new Random();
                         root++;
                         int rootItem = root;
                        
-                        tree.Add(new TreeData() { TaskID = rootItem, TaskName = "Parent task " + rootItem.ToString(), isParent = true, IsExpanded = true, ParentValue = null, Duration = ran.Next(1, 50), Tasks = new TaskDetails { Name = "Parent" } });
+                        tree.Add(new TreeData() { TaskID = rootItem, TaskName = "Parent task " + rootItem.ToString(), isParent = true, IsExpanded = true, ParentValue = null, Duration = ran.Next(1, 50), Tasks = new TaskDetails { Name = "Parent"+ rootItem.ToString() } });
                         int parent = root;
                           int subparent = root;
                             for (var c = 0; c < 3; c++)
                             {
                                 root++;
                                 int childID = root;
-                                tree.Add(new TreeData() { TaskID = childID, TaskName = "sub Child task " + childID.ToString(), ParentValue = subparent, Duration = ran.Next(1, 50), Tasks = new TaskDetails { Name = "Sub child" } });
+                                tree.Add(new TreeData() { TaskID = childID, TaskName = "sub Child task " + childID.ToString(), ParentValue = subparent, Duration = ran.Next(1, 50), Tasks = new TaskDetails { Name = "Sub child" + childID.ToString()} });
                             }
                         }
                     
