@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 import { DataManager, Query, UrlAdaptor } from '@syncfusion/ej2-data';
+import { GridModule } from '@syncfusion/ej2-angular-grids';
+import { TreeGridModule } from '@syncfusion/ej2-angular-treegrid';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [GridModule, TreeGridModule ],
   template: `
   <ejs-treegrid [dataSource]='data' [query]="query" [treeColumnIndex]='1' height='400' idMapping='TaskID' parentIdMapping='ParentValue' hasChildMapping='isParent' >
                 <e-columns>
